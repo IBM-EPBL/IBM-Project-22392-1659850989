@@ -9,16 +9,7 @@ deviceType = "shahidh"
 deviceId = "9876"
 authMethod = "token"
 authToken = "-WmfT+4@nB5cfzR__k"
-# Initialize GPIO
-def myCommandCallback(cmd):
- print("Command received: %s" % cmd.data['command'])
- status=cmd.data['command']
- if status=="buzzeron":
-  print ("gas leakage found")
- elif status == "buzzeroff":
-   print ("no leakage")
- else :
-   print ("please send proper command")
+
 try:
   deviceOptions = {"org": organization, "type": deviceType, "id":
   deviceId, "auth-method": authMethod, "auth-token": authToken}
